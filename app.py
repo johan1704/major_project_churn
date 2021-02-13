@@ -7,6 +7,7 @@ Created on Sun Jun 28 16:01:58 2020
 import streamlit as st
 import pandas as pd
 import pickle
+import joblib
 from PIL import Image
 
 #pickle_in=open('xgboost.pkl', 'rb')
