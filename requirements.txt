@@ -5,3 +5,4 @@ pandas==1.0.4
 numpy==1.18.1
 seaborn==0.10.1
 imblearn
+xgboost
