@@ -103,7 +103,7 @@ if selectbox == 'View dataset analysis':
         st.image(image3,width=900)
         st.text("It appears that customers with age's range of 35 and 52 exit more than others customers")
     if graph =='Churn target vs Geography':
-        image4=Image.open('churn risk per Geography.png')
+        image4=Image.open('Churn risk per Geography.png')
         st.image(image4,width=800)
         st.text("It appears that customers located in germany tend to exit more ,followed by france's customers")
 
