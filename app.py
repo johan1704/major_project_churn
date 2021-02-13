@@ -9,9 +9,10 @@ import pandas as pd
 import pickle
 from PIL import Image
 
-pickle_in=open('xgboost.pkl', 'rb')
-classifier=pickle.load(pickle_in)
+#pickle_in=open('xgboost.pkl', 'rb')
+#classifier=pickle.load(pickle_in)
 
+model = joblib.load('XGBoost_model.sav')
 #image=Image.open('down.jpg')
 #st.image(image,width=500)
 
@@ -70,8 +71,8 @@ if selectbox == 'Enter values for prediction':
     input_df=pd.DataFrame([input_dict])
     
     if st.button("Predict"):
-        output=classifier.predict(input_df)
-        prob=classifier.predict_proba(input_df)
+        output=model.predict(input_df)
+        prob=model.predict_proba(input_df)
         if int(output)==0:
             st.error('Not leaving! The probability of customer NOT leaving is {}%'.format(round(prob[0][0]*100,2)))
         else:
