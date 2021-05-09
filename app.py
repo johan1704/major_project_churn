@@ -75,9 +75,9 @@ if selectbox == 'Enter values for prediction':
         output=model.predict(input_df)
         prob=model.predict_proba(input_df)
         if int(output)==0:
-            st.error('Not leaving! The probability of customer NOT leaving is {}%'.format(round(prob[0][0]*100,2)))
+            st.error('Not leaving! The probability is {}%'.format(round(prob[0][0]*100,2)))
         else:
-            st.error('The probability of customer leaving is {}%, please review his profile.'.format(round(prob[0][1]*100)))
+            st.error('The probability that customer is going to exit is {}%, please review his profile.'.format(round(prob[0][1]*100)))
     
 if selectbox == 'View training dataset':
     data=pd.read_csv('Churn_Modelling.csv')
